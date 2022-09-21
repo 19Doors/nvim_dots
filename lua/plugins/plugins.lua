@@ -47,15 +47,27 @@ return require("packer").startup(function(use)
 	})
 
 	-- Files Finders
-	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0", cmd = "Telescope"})
+	use({ "nvim-telescope/telescope.nvim", tag = "0.1.0", cmd = "Telescope" })
 
 	-- Utilities
 	use({ "stevearc/dressing.nvim" })
+	use("folke/which-key.nvim")
 	use("lewis6991/impatient.nvim")
-	use({ "akinsho/bufferline.nvim", tag = "v2.*"})
+	use({ "akinsho/bufferline.nvim", tag = "v2.*" })
 	use("rcarriga/nvim-notify")
-	use "matze/vim-move"
-	use 'simrat39/symbols-outline.nvim'
+	use("matze/vim-move")
+	use("simrat39/symbols-outline.nvim")
+	use("norcalli/nvim-colorizer.lua")
+	use("elkowar/yuck.vim")
+	use({
+		"nvim-orgmode/orgmode",
+	})
+	use({
+		"akinsho/org-bullets.nvim",
+		config = function()
+			require("org-bullets").setup()
+		end,
+	})
 
 	-- Completion
 	use({
